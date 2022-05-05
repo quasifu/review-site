@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { intervalToDuration, isBefore } from "date-fns";
+import { useEffect, useState } from 'react';
+import { intervalToDuration } from 'date-fns';
 
 export const useTicker = (futureDate) => {
   const [now, setNow] = useState(new Date());
@@ -22,7 +22,7 @@ export const useTicker = (futureDate) => {
 
   let { years, months, days, hours, minutes, seconds } = intervalToDuration({
     start: futureDate,
-    end: now
+    end: now,
   });
   if (years > 0) {
     months += 12;

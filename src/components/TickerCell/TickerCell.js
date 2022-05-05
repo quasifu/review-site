@@ -1,5 +1,5 @@
-import style from "./TickerCell.module.scss";
-import { TickerSeparator } from "../TickerSeparator";
+import style from './TickerCell.module.scss';
+
 export const TickerCell = ({ label, value }) => {
   const formattedValue = value < 10 ? `0${value}` : value.toString();
 
