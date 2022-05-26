@@ -57,7 +57,7 @@ function About() {
         <ul className={style.list}>
           {links.map((link) => (
             <li>
-              <a className={style.link} href={`${link.url}`}>
+              <a key={link.name} className={style.link} href={`${link.url}`}>
                 {link.name}
               </a>
             </li>

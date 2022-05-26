@@ -4,7 +4,12 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ReactGA from 'react-ga4';
 
+const TRACKING_ID = 'G-HPBYFQCCYJ'; // YOUR_OWN_TRACKING_ID
+
+ReactGA.initialize(TRACKING_ID);
+ReactGA.send('pageview');
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
