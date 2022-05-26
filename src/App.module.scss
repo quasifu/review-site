@@ -11,8 +11,8 @@
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: 100vh;
-  max-width: 60vw;
+  min-height: 100vh;
+  max-width: 80vw;
   color: $text-color;
   padding: 40px 0px;
 
