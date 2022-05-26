@@ -1,14 +1,15 @@
 .tickerCell {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0px 15px;
+  flex-direction: column;
 
-    > .tickerCellValue {
-        font-size: 7rem;
-    }
-    
-    > .tickerCellLabel {
-        font-style: italic;
-    }
+  > .tickerCellValue {
+    font-size: 100%;
+  }
+
+  > .tickerCellLabel {
+    font-style: italic;
+  }
 }
