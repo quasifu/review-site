@@ -23,10 +23,5 @@ export const Ticker = ({ futureDate }) => {
     </>
   );
 
-  return (
-    <div>
-      <h2>Time since starting job:</h2>
-      <div className={style.tickerShell}>{tickerContents}</div>
-    </div>
-  );
+  return <div className={style.tickerShell}>{tickerContents}</div>;
 };
