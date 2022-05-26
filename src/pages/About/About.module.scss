@@ -3,3 +3,14 @@
 .link {
   color: $text-color;
 }
+
+.listWrapper {
+  width: 100%;
+  text-align: left;
+  padding-left: 20px;
+}
+.list {
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 20px;
+}

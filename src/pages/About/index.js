@@ -1,4 +1,5 @@
 import style from './About.module.scss';
+import appStyle from '../../App.module.scss';
 
 const links = [
   {
@@ -45,19 +46,18 @@ const links = [
 
 function About() {
   return (
-    <div>
+    <div className={appStyle.wrapper}>
       <h1>Liquid Concept Pools - Residential</h1>
       <div>
         Liquid Concept Pools markets themselves as Best Design, Best Build, and
-        Best Price. This site provides real images and real builds that have
-        happened.
+        Best Price. This site provides real images and real builds.
       </div>
-      <div>
+      <div className={style.listWrapper}>
         Other sites that provide reviews are:
-        <ul>
+        <ul className={style.list}>
           {links.map((link) => (
             <li>
-              <a className={style.link} href={`${link.url}`}>
+              <a key={link.name} className={style.link} href={`${link.url}`}>
                 {link.name}
               </a>
             </li>
