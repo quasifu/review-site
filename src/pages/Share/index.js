@@ -60,15 +60,12 @@ function Share() {
                       email,
                       captchaToken,
                     });
-                    console.log(response);
-                    if (response.data.success) {
-                      setMessage(
-                        'Your email has been submitted successfully.  We will be in touch soon. Thank you.'
-                      );
-                      setCaptchaToken(undefined);
-                      setIsEmailValid(false);
-                      setEmail(undefined);
-                    }
+                    setMessage(
+                      'Your email has been submitted successfully.  We will be in touch soon. Thank you.'
+                    );
+                    setCaptchaToken(undefined);
+                    setIsEmailValid(false);
+                    setEmail(undefined);
                   } catch (err) {
                     setMessage('An error occurred.  Please try again.');
                   }
