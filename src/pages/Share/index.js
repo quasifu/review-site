@@ -2,12 +2,14 @@ import { useState, useEffect } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import style from './Share.module.scss';
 import appStyle from '../../App.module.scss';
+import axios from 'axios';
 
 function Share() {
   const [isValid, setIsValid] = useState(false);
   const [captchaToken, setCaptchaToken] = useState(undefined);
   const [email, setEmail] = useState();
   const [isEmailValid, setIsEmailValid] = useState(false);
+  const [message, setMessage] = useState();
   const onChange = (value) => {
     setCaptchaToken(value);
     console.log('Captcha value:', value);
@@ -34,6 +36,7 @@ function Share() {
           email address and we will contact you.
         </div>
         <div className={style.formWrapper}>
+          {message && message}
           {captchaToken ? (
             <>
               <input
@@ -51,8 +54,24 @@ function Share() {
                   isValid ? appStyle.toggleButton : appStyle.disabledButton
                 }
                 disabled={!isValid}
-                onClick={() => {
-                  console.log('clicked');
+                onClick={async () => {
+                  try {
+                    const response = await axios.put('/api/share', {
+                      email,
+                      captchaToken,
+                    });
+                    console.log(response);
+                    if (response.data.success) {
+                      setMessage(
+                        'Your email has been submitted successfully.  We will be in touch soon. Thank you.'
+                      );
+                      setCaptchaToken(undefined);
+                      setIsEmailValid(false);
+                      setEmail(undefined);
+                    }
+                  } catch (err) {
+                    setMessage('An error occurred.  Please try again.');
+                  }
                 }}
               >
                 Submit
