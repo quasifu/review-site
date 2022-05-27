@@ -18,7 +18,7 @@ function ActionBar() {
     <>
       <div className={style.actionBarWrapper}>
         <div className={style.actionBarHandle} onClick={() => setOpen(!open)}>
-          <Chevron direction={open ? 'down' : 'up'} />
+          <Chevron direction={open ? 'down' : 'up'} className={style.chevron} />
         </div>
         <AnimateHeight
           id='actionBar'
