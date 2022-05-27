@@ -12,6 +12,7 @@
 
 .actionBar {
   padding: 10px 0px;
+  background: linear-gradient(rgba(52, 143, 199, 0), rgba(52, 143, 199, 0.5));
   backdrop-filter: blur(8px);
 }
 
@@ -33,4 +34,8 @@
   flex: 1;
   width: 100vw;
   flex-direction: column;
+}
+
+.chevron {
+  color: $button-text-color;
 }
