@@ -1,8 +1,31 @@
-.actionBar {
+@import '../../_colours';
+
+.actionBar,
+.actionBarHandle {
   display: flex;
   flex: 1;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.actionBar {
+  padding: 10px 0px;
+  background: $text-color;
+}
+
+.closedActionBar {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 0;
+}
+
+.actionBarWrapper {
+  position: fixed;
+  bottom: 0px;
 }
