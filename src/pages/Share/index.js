@@ -12,7 +12,6 @@ function Share() {
   const [message, setMessage] = useState();
   const onChange = (value) => {
     setCaptchaToken(value);
-    console.log('Captcha value:', value);
   };
 
   useEffect(() => {
