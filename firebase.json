@@ -2,7 +2,22 @@
   "hosting": {
     "public": "build",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "headers": [
+      {
+        "source": "/@(api)/**",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          }
+        ]
+      }
+    ],
     "rewrites": [
+      {
+        "source": "/api/**",
+        "function": "submissions"
+      },
       {
         "source": "**",
         "destination": "/index.html"
