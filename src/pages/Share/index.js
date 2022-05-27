@@ -56,7 +56,7 @@ function Share() {
                 disabled={!isValid}
                 onClick={async () => {
                   try {
-                    const response = await axios.put('/api/share', {
+                    await axios.put('/api/share', {
                       email,
                       captchaToken,
                     });
