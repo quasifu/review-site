@@ -62,4 +62,31 @@
       color: $button-active-text-color;
     }
   }
+
+  .disabledButton {
+    padding: 1rem;
+    font-size: 0.5em;
+    margin: 1rem 0.5rem 0rem 0.5rem;
+    border: 1px solid $button-disabled-border-color;
+    background: $button-disabled-background-color;
+    border-radius: 0.3rem;
+    text-transform: uppercase;
+    color: $button-disabled-text-color;
+    font-weight: 600;
+    width: 200px;
+  }
+
+  .input {
+    padding: 0.5rem;
+    font-size: 0.5em;
+    margin: 1rem 0.5rem 1rem 0.5rem;
+    border: 1px solid $button-active-border-color;
+    //background: $background-light-gradient;
+    border-radius: 0.3rem;
+
+    color: $button-disabled-text-color;
+    font-weight: 600;
+    cursor: pointer;
+    width: 180px;
+  }
 }
