@@ -44,7 +44,12 @@ function ActionBar() {
             >
               Share your story
             </button>
-            <button className={appStyle.toggleButton}>Buy this domain</button>
+            <button
+              className={appStyle.toggleButton}
+              onClick={() => navigateToPage('/buy')}
+            >
+              Buy this domain
+            </button>
           </div>
         </AnimateHeight>
       </div>
