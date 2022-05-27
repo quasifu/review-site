@@ -9,6 +9,11 @@ function ActionBar() {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
 
+  function navigateToPage(page) {
+    navigate(page);
+    setOpen(false);
+  }
+
   return (
     <>
       <div className={style.actionBarWrapper}>
@@ -23,13 +28,13 @@ function ActionBar() {
           <div className={open ? style.actionBar : style.closedActionBar}>
             <button
               className={appStyle.toggleButton}
-              onClick={() => navigate('/')}
+              onClick={() => navigateToPage('/')}
             >
               Home
             </button>
             <button
               className={appStyle.toggleButton}
-              onClick={() => navigate('/about')}
+              onClick={() => navigateToPage('/about')}
             >
               Learn More
             </button>
