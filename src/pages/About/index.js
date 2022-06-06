@@ -53,7 +53,7 @@ function About() {
         Best Price. This site provides real images and real builds.
       </div>
       <div className={style.listWrapper}>
-        Other sites that provide reviews are:
+        Other sites that documents real builds are:
         <ul className={style.list}>
           {links.map((link) => (
             <li>
