@@ -38,5 +38,22 @@
 }
 
 .chevron {
-  color: $button-text-color;
+  animation: gradient 2s ease infinite;
+  cursor: pointer;
+}
+
+@keyframes gradient {
+  0% {
+    color: red;
+    font-size: 1em;
+  }
+  50% {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bolder;
+  }
+  100% {
+    color: red;
+    font-size: 1em;
+  }
 }
