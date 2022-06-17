@@ -16,3 +16,22 @@
     font-weight: 600;
   }
 }
+
+.fixedTickerShell {
+  position: fixed;
+  top: 0px;
+  font-size: 1rem;
+  flex-wrap: wrap;
+  width: 100vw;
+  justify-content: space-around;
+  display: flex;
+  z-index: 1;
+  background: linear-gradient(rgba(52, 143, 199, 0), rgba(52, 143, 199, 0.5));
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid $button-active-text-color;
+}
+
+.fixedTicker {
+  display: flex;
+  flex-direction: row;
+}

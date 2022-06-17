@@ -1,10 +1,13 @@
 import { TickerCell } from 'components/TickerCell';
 import { TickerSeparator } from 'components/TickerSeparator';
-import { useTicker } from 'hooks';
+import { useTicker, useIntersection } from 'hooks';
+import React, { useRef } from 'react';
 
 import style from './Ticker.module.scss';
 
 export const Ticker = ({ futureDate }) => {
+  const ref = useRef();
+  const inViewport = useIntersection(ref, '0px');
   const { months, days, hours, minutes, seconds, isTimeUp } =
     useTicker(futureDate);
   const tickerContents = isTimeUp ? (
@@ -23,5 +26,16 @@ export const Ticker = ({ futureDate }) => {
     </>
   );
 
-  return <div className={style.tickerShell}>{tickerContents}</div>;
+  return (
+    <>
+      <div className={style.tickerShell} ref={ref}>
+        {tickerContents}
+      </div>
+      {!inViewport && (
+        <div className={style.fixedTickerShell}>
+          <div className={style.fixedTicker}>{tickerContents}</div>
+        </div>
+      )}
+    </>
+  );
 };

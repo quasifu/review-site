@@ -13,3 +13,23 @@
   text-align: center;
   padding: 20px 0px;
 }
+
+.imgSlideWrapper {
+  padding: 40px 0px 0px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  flex-direction: column;
+}
+
+.thumbnails {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: center;
+}
+
+.thumbnails img {
+  height: 100px;
+  padding: 10px;
+}
