@@ -1,0 +1,21 @@
+.wrapper {
+  position: fixed;
+  left: 10px;
+  top: 10%;
+}
+
+.progressWrapper {
+  width: 20px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column-reverse;
+  border: 1px solid white;
+}
+
+.progress {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  background-color: red;
+  vertical-align: baseline;
+}

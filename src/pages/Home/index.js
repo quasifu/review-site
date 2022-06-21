@@ -27,6 +27,7 @@ function Home() {
     <div className={appStyle.wrapper}>
       <h1>Residential Pools</h1>
       <Ticker futureDate={futureDate} />
+      <div className={style.text}>Since start date</div>
       <div className={style.imgSlideWrapper}>
         <ImageSlider
           backgroundImg={selectedImage.actual}
@@ -44,7 +45,7 @@ function Home() {
           ))}
         </div>
       </div>
-      <div className={style.text}>Since start date</div>
+      <div className={style.text}>Our journey started December 21, 2020...</div>
       <Timeline />
     </div>
   );
