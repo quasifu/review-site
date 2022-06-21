@@ -1,6 +1,6 @@
 .wrapper {
   position: fixed;
-  left: 10px;
+  left: 20px;
   top: 10%;
 }
 
@@ -18,4 +18,8 @@
   bottom: 0;
   background-color: red;
   vertical-align: baseline;
+  -moz-transition: height 1s ease;
+  -webkit-transition: height 1s ease;
+  -o-transition: height 1s ease;
+  transition: height 1s ease;
 }
