@@ -1,12 +1,10 @@
-import Thermometer from 'components/Thermometer';
-import { useState } from 'react';
 import { VerticalTimeline } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import dates from './dates';
 import VerticalTimelineElementWrapper from './VerticalTimeElementWrapper';
 
-function Timeline() {
-  const [percent, setPercent] = useState(0);
+function Timeline({ setPercent }) {
+  //const [percent, setPercent] = useState(0);
 
   const renderDetail = (item) => {
     const diffInDatesInDays = Math.round(
@@ -29,8 +27,6 @@ function Timeline() {
   };
   return (
     <VerticalTimeline>
-      {percent}
-      <Thermometer height={`${percent}%`} />
       {dates.map((date) => renderDetail(date))}
     </VerticalTimeline>
   );

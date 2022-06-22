@@ -1,15 +1,20 @@
+@import '../../_colours';
+
 .wrapper {
-  position: fixed;
-  left: 20px;
-  margin-top: 80px;
-  top: 0;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
 }
 
 .progressWrapper {
-  width: 20px;
-  height: 80vh;
+  width: 80vw;
+  margin-top: 10px;
+  height: 10px;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row;
+  border-radius: 4px;
+  overflow: hidden;
   border: 1px solid white;
 }
 
@@ -17,10 +22,10 @@
   width: 100%;
   position: relative;
   bottom: 0;
-  background-color: red;
+  background-color: $background-dark-gradient;
   vertical-align: baseline;
-  -moz-transition: height 1s ease;
-  -webkit-transition: height 1s ease;
-  -o-transition: height 1s ease;
-  transition: height 1s ease;
+  -moz-transition: width 1s ease;
+  -webkit-transition: width 1s ease;
+  -o-transition: width 1s ease;
+  transition: width 1s ease;
 }
