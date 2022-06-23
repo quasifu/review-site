@@ -16,6 +16,13 @@
   border-radius: 4px;
   overflow: hidden;
   border: 1px solid white;
+  position: relative;
+}
+
+.textWrapper {
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .progress {
@@ -24,8 +31,11 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   bottom: 0;
-  //background-color: $background-dark-gradient;
-  animation: gradient 2s ease infinite;
+  background: linear-gradient(
+    to left,
+    $background-dark-gradient,
+    $background-light-gradient
+  );
   vertical-align: baseline;
   -moz-transition: width 1s ease;
   -webkit-transition: width 1s ease;

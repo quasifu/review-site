@@ -40,6 +40,7 @@ function Home() {
             <img
               alt={'Liquid Concept Pools'}
               src={image.actual}
+              key={i}
               onClick={() => {
                 setSelectedImage(images[i]);
               }}

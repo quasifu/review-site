@@ -10,14 +10,12 @@ function VerticalTimelineElementWrapper({
   const { observe } = useInView({
     threshold: 0.5,
     onEnter: ({ scrollDirection, entry }) => {
-      console.log('Enter', scrollDirection, entry.target.id);
       if (scrollDirection.vertical === 'up' && entry.target.id) {
         onEnter(entry.target.id, item.date);
       }
       //onEnter(string, scrollDirection.vertical || '');
     },
     onLeave: ({ scrollDirection, entry }) => {
-      console.log('Leave', scrollDirection, entry.target.id);
       if (scrollDirection.vertical === 'down' && entry.target.id) {
         onLeave(entry.target.id, item.date);
       }
