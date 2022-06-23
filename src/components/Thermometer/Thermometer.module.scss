@@ -5,12 +5,12 @@
   flex: 1;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .progressWrapper {
   width: 80vw;
   margin-top: 10px;
-  height: 10px;
   display: flex;
   flex-direction: row;
   border-radius: 4px;
@@ -21,11 +21,26 @@
 .progress {
   width: 100%;
   position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   bottom: 0;
-  background-color: $background-dark-gradient;
+  //background-color: $background-dark-gradient;
+  animation: gradient 2s ease infinite;
   vertical-align: baseline;
   -moz-transition: width 1s ease;
   -webkit-transition: width 1s ease;
   -o-transition: width 1s ease;
   transition: width 1s ease;
+}
+
+@keyframes gradient {
+  0% {
+    background-color: $background-light-gradient;
+  }
+  50% {
+    background-color: $background-dark-gradient;
+  }
+  100% {
+    background-color: $background-light-gradient;
+  }
 }

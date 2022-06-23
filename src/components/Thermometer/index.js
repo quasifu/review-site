@@ -1,12 +1,22 @@
 import style from './Thermometer.module.scss';
 
-function Thermometer({ width }) {
+function Thermometer({ percent, datePaid }) {
+  const diffInDatesInDays = Math.round(
+    (new Date() - new Date(datePaid)) / (1000 * 60 * 60 * 24)
+  );
   return (
-    <div className={style.wrapper}>
-      <div className={style.progressWrapper}>
-        <div className={style.progress} style={{ width: width }}></div>
+    <>
+      <div className={style.wrapper}>
+        <div>{diffInDatesInDays}</div>
+        <div className={style.progressWrapper}>
+          <div className={style.progress} style={{ width: `${percent}%` }}>
+            {percent > 1
+              ? `${percent}% paid ${diffInDatesInDays} days ago`
+              : `${percent}%`}
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

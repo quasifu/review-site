@@ -24,10 +24,11 @@ const images = [
 function Home() {
   const [selectedImage, setSelectedImage] = useState(images[0]);
   const [percent, setPercent] = useState(0);
+  const [datePaid, setDatePaid] = useState(0);
   return (
     <div className={appStyle.wrapper}>
       <h1>Residential Pools</h1>
-      <Ticker futureDate={futureDate} percent={percent} />
+      <Ticker futureDate={futureDate} percent={percent} datePaid={datePaid} />
       <div className={style.text}>Since start date</div>
       <div className={style.imgSlideWrapper}>
         <ImageSlider
@@ -47,7 +48,7 @@ function Home() {
         </div>
       </div>
       <div className={style.text}>Our journey started December 21, 2020...</div>
-      <Timeline setPercent={setPercent} />
+      <Timeline setPercent={setPercent} setDatePaid={setDatePaid} />
     </div>
   );
 }

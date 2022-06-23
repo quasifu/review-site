@@ -6,7 +6,7 @@ import React, { useRef } from 'react';
 
 import style from './Ticker.module.scss';
 
-export const Ticker = ({ futureDate, percent }) => {
+export const Ticker = ({ futureDate, percent, datePaid }) => {
   const ref = useRef();
   const inViewport = useIntersection(ref, '0px');
   const { months, days, hours, minutes, seconds, isTimeUp } =
@@ -36,7 +36,7 @@ export const Ticker = ({ futureDate, percent }) => {
         <div className={style.fixedTickerShell}>
           <div className={style.fixedTicker}>
             {tickerContents}
-            <Thermometer width={`${percent}%`} />
+            <Thermometer percent={percent} datePaid={datePaid} />
           </div>
         </div>
       )}

@@ -3,7 +3,7 @@ import 'react-vertical-timeline-component/style.min.css';
 import dates from './dates';
 import VerticalTimelineElementWrapper from './VerticalTimeElementWrapper';
 
-function Timeline({ setPercent }) {
+function Timeline({ setPercent, setDatePaid }) {
   //const [percent, setPercent] = useState(0);
 
   const renderDetail = (item) => {
@@ -15,12 +15,14 @@ function Timeline({ setPercent }) {
       <VerticalTimelineElementWrapper
         item={item}
         key={item.date}
-        onEnter={(value, days) => {
-          //  const newValue = Math.round(eval(value));
-          // console.log(newValue);
+        onEnter={(value, datePaid) => {
           setPercent(parseInt(value));
+          setDatePaid(datePaid);
         }}
-        onLeave={(value) => setPercent(parseInt(value))}
+        onLeave={(value, datePaid) => {
+          setPercent(parseInt(value));
+          setDatePaid(datePaid);
+        }}
         diffInDatesInDays={diffInDatesInDays}
       />
     );
