@@ -12,9 +12,7 @@ function Thermometer({ percent, datePaid }) {
             &nbsp;
           </div>
           <div className={style.textWrapper}>
-            {percent > 1
-              ? `${percent}% paid ${diffInDatesInDays} days ago`
-              : `${percent}%`}
+            {percent}% paid {diffInDatesInDays} days ago
           </div>
         </div>
       </div>

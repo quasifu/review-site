@@ -28,8 +28,11 @@ function Home() {
   return (
     <div className={appStyle.wrapper}>
       <h1>Residential Pools</h1>
+      <div className={style.text}>
+        Liquid Concept Pools in Roanoke was contracted to build our pool in
+        December 2020. <br></br>The time it has taken since the start date is...
+      </div>
       <Ticker futureDate={futureDate} percent={percent} datePaid={datePaid} />
-      <div className={style.text}>Since start date</div>
       <div className={style.imgSlideWrapper}>
         <ImageSlider
           backgroundImg={selectedImage.actual}
