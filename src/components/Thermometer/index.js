@@ -7,7 +7,6 @@ function Thermometer({ percent, datePaid }) {
   return (
     <>
       <div className={style.wrapper}>
-        <div>{diffInDatesInDays}</div>
         <div className={style.progressWrapper}>
           <div className={style.progress} style={{ width: `${percent}%` }}>
             {percent > 1
