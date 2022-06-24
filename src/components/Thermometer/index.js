@@ -1,5 +1,5 @@
 import style from './Thermometer.module.scss';
-
+import Emoticon from 'components/Emoticon';
 function Thermometer({ percent, datePaid }) {
   const diffInDatesInDays = Math.round(
     (new Date() - new Date(datePaid)) / (1000 * 60 * 60 * 24)
@@ -12,7 +12,7 @@ function Thermometer({ percent, datePaid }) {
             &nbsp;
           </div>
           <div className={style.textWrapper}>
-            {percent}% paid {diffInDatesInDays} days ago
+            {percent}% paid {diffInDatesInDays} days ago <Emoticon />
           </div>
         </div>
       </div>
