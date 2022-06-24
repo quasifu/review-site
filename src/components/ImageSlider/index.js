@@ -2,7 +2,6 @@ import style from './ImageSlider.module.scss';
 import { useEffect, useState } from 'react';
 function ImageSlider(props) {
   const [pos, setPos] = useState(50);
-  console.log(props);
   useEffect(() => {
     //  $('.foreground-img').css('width', `${sliderPos}%`);
     //  // Update the position of the slider button

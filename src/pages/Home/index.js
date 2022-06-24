@@ -23,10 +23,16 @@ const images = [
 ];
 function Home() {
   const [selectedImage, setSelectedImage] = useState(images[0]);
+  const [percent, setPercent] = useState(0);
+  const [datePaid, setDatePaid] = useState(0);
   return (
     <div className={appStyle.wrapper}>
       <h1>Residential Pools</h1>
-      <Ticker futureDate={futureDate} />
+      <div className={style.text}>
+        Liquid Concept Pools in Roanoke was contracted to build our pool in
+        December 2020. <br></br>The time it has taken since the start date is...
+      </div>
+      <Ticker futureDate={futureDate} percent={percent} datePaid={datePaid} />
       <div className={style.imgSlideWrapper}>
         <ImageSlider
           backgroundImg={selectedImage.actual}
@@ -37,6 +43,7 @@ function Home() {
             <img
               alt={'Liquid Concept Pools'}
               src={image.actual}
+              key={i}
               onClick={() => {
                 setSelectedImage(images[i]);
               }}
@@ -44,8 +51,8 @@ function Home() {
           ))}
         </div>
       </div>
-      <div className={style.text}>Since start date</div>
-      <Timeline />
+      <div className={style.text}>Our journey started December 21, 2020...</div>
+      <Timeline setPercent={setPercent} setDatePaid={setDatePaid} />
     </div>
   );
 }

@@ -4,6 +4,7 @@ const dates = [
     title: '',
     subtitle: '',
     content: ' The Pool Bid Agreement and Deposit was paid.',
+    ref: '1.6',
   },
   {
     date: 'January 8, 2021',
@@ -54,6 +55,7 @@ const dates = [
     title: '',
     subtitle: '',
     content: 'Dig (dug to the wrong depth).  33% paid.',
+    ref: '33',
   },
   {
     date: 'March 25, 2021',
@@ -113,6 +115,7 @@ const dates = [
     title: '',
     subtitle: '',
     content: 'Gunite.  66% paid.',
+    ref: '66',
   },
   {
     date: 'June 28, 2021',
@@ -190,6 +193,7 @@ const dates = [
     title: '',
     subtitle: '',
     content: 'Concrete Decking is poured and 3rd payment.  90% paid.',
+    ref: '90',
   },
   {
     date: 'October 9, 2021',
